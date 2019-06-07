@@ -11,7 +11,8 @@ const report = (context, options = {}) => {
         // Markdown specific type
         // It is not documented
         ["LinkReference"](node) {
-            if (node.identifier && node.referenceType === "shortcut") {
+            // ^identifer
+            if (node.identifier && node.identifier[0] === "^" && node.referenceType === "shortcut") {
                 shortcuts.push({
                     node,
                     identifier: node.identifier
@@ -19,7 +20,7 @@ const report = (context, options = {}) => {
             }
         },
         ["Definition"](node) {
-            if (node.identifier) {
+            if (node.identifier && node.identifier[0] === "^") {
                 definitions.push({
                     node,
                     identifier: node.identifier

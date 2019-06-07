@@ -4,6 +4,9 @@ import rule from "../src/textlint-rule-footnote-order";
 // ruleName, rule, { valid, invalid }
 tester.run("textlint-rule-footnote-order", rule, {
     valid: [
+        `[link] is ignored
+        
+[link]: https://example.com`,
         `valid text.
 foo [^1].
 bar [^2].
