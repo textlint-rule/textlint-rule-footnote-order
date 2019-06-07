@@ -4,6 +4,8 @@ textlint rule that sort footnote identifier(`[^1]`) order.
 
 This rule check that to use incremental number for footnote identifier.
 
+- **Limitation:** This rule work only Markdown.
+
 **OK**:
 
 ```
