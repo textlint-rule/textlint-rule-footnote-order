@@ -67,18 +67,18 @@ const report = (context, options = {}) => {
                 const childStr = Array.isArray(shortcut.node.children) && shortcut.node.children[0];
                 if (pairDefinition && childStr) {
                     // report fixable error
-                    report(childStr, new RuleError(`Should use sorted number for identifier`, {
+                    report(childStr, new RuleError(`Should use incremental number for identifier`, {
                         fix: fixer.replaceText(childStr, expectedShortcutIdentifier)
                     }));
                     const pairDefinitionReplace = `[^${pairDefinition.identifier}]`;
-                    report(pairDefinition.node, new RuleError(`Should use sorted number for definition`, {
+                    report(pairDefinition.node, new RuleError(`Should use incremental number for definition`, {
                         fix: fixer.replaceTextRange([0, pairDefinitionReplace.length - 1], `[^${expectedSortedNumber}]`)
                     }));
                 } else {
                     // report error
-                    report(shortcut.node, new RuleError(`Should use use sorted number for identifier`));
+                    report(shortcut.node, new RuleError(`Should use use incremental number for identifier`));
                     if (pairDefinition) {
-                        report(pairDefinition.node, new RuleError(`Should use use sorted number for definition`));
+                        report(pairDefinition.node, new RuleError(`Should use use incremental number for definition`));
                     }
                 }
             });
