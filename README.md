@@ -1,4 +1,4 @@
-# textlint-rule-footnote-order
+# textlint-rule-footnote-order [![Build Status](https://travis-ci.org/textlint-rule/textlint-rule-footnote-order.svg?branch=master)](https://travis-ci.org/textlint-rule/textlint-rule-footnote-order)
 
 textlint rule that sort footnote identifier(`[^1]`) order.
 
