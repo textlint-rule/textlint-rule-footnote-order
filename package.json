@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-footnote-order",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "textlint rule that sort footnote identifier(`[^1]`) order.",
   "keywords": [
     "textlintrule"
